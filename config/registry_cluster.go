@@ -68,6 +68,7 @@ func GetProvider(_ context.Context, sdkProvider *schema.Provider, fwProvider fwp
 	}
 
 	pc.ConfigureResources()
+	deleteWriteOnlyFields(pc, generationProvider)
 	return pc, nil
 }
 

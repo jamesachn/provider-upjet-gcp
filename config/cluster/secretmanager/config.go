@@ -29,7 +29,5 @@ func Configure(p *config.Provider) {
 			Extractor:     common.ExtractResourceIDFuncPath,
 		}
 		r.MetaResource.ArgumentDocs["secret_data"] = `The secret data. Must be no larger than 64KiB.`
-		delete(r.TerraformResource.Schema, "secret_data_wo")
-		delete(r.TerraformResource.Schema, "secret_data_wo_version")
 	})
 }

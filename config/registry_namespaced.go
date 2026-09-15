@@ -67,6 +67,7 @@ func GetNamespacedProvider(_ context.Context, sdkProvider *schema.Provider, fwPr
 	}
 
 	pc.ConfigureResources()
+	deleteWriteOnlyFields(pc, generationProvider)
 	return pc, nil
 }
 
